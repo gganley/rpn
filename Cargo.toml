@@ -1,0 +1,16 @@
+[package]
+name = "rpn"
+version = "0.0.1"
+authors = ["Gregory Ganley <me@gganley.com"]
+description = "rpn"
+readme = "README.md"
+homepage = "https://github.com/gganley/rpn"
+edition = "2018"
+
+[lib]
+name = "rpn"
+path = "infix_to_postfix.rs"
+
+[[bin]]
+name = "main"
+path = "rpn.rs"
