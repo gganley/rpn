@@ -1,0 +1,21 @@
+
+create table metadata (          -- github.com/AlDanial/cloc v 1.80
+                timestamp varchar(500),
+                Project   varchar(500),
+                elapsed_s real);
+create table t        (
+                Project       varchar(500)   ,
+                Language      varchar(500)   ,
+                File          varchar(500)   ,
+                File_dirname  varchar(500)   ,
+                File_basename varchar(500)   ,
+                nBlank        integer        ,
+                nComment      integer        ,
+                nCode         integer        ,
+                nScaled       real           );
+begin transaction;
+insert into metadata values('2019-02-20 14:09:45', '/home/gganley/Developer/rust/rpn', 0.024249);
+insert into t  values('/home/gganley/Developer/rust/rpn', 'Rust', 'rpn.rs', '.', 'rpn.rs', 3, 0, 37, 37.000000);
+insert into t  values('/home/gganley/Developer/rust/rpn', 'Rust', 'infix_to_postfix.rs', '.', 'infix_to_postfix.rs', 8, 6, 76, 76.000000);
+insert into t  values('/home/gganley/Developer/rust/rpn', 'TOML', 'Cargo.toml', '.', 'Cargo.toml', 2, 0, 14, 38.640000);
+commit;
